@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "../Components/Input";
-import { Botton } from "../Components/Botton";
-import Swal from 'sweetalert2';
+import { Botton } from "../Components/Botton"; // Asegúrate que se llame Botton
+import Swal from "sweetalert2";
 
 export const ReportForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ export const ReportForm = () => {
         icon: "error",
         title: "Error...",
         text: "Completa los campos de manera correcta!",
-        footer: ""
+        footer: "",
       });
       return;
     }
@@ -60,11 +60,37 @@ export const ReportForm = () => {
         <h2 className="text-2xl font-bold mb-6 text-altice-dark text-center">
           Reportar Problema
         </h2>
-        <Input label="Nombre completo" name="nombre" value={formData.nombre} onChange={handleChange} />
-        <Input label="Cédula o Número de contrato" name="cedula" value={formData.cedula} onChange={handleChange} />
-        <Input label="Servicio afectado (ej. Internet)" name="servicio" value={formData.servicio} onChange={handleChange} />
-        <Input label="Descripción del problema" name="descripcion" value={formData.descripcion} onChange={handleChange} />
-        <Input label="Fecha del problema" name="fecha" type="date" value={formData.fecha} onChange={handleChange} />
+        <Input
+          label="Nombre completo"
+          name="nombre"
+          value={formData.nombre}
+          onChange={handleChange}
+        />
+        <Input
+          label="Cédula o Número de contrato"
+          name="cedula"
+          value={formData.cedula}
+          onChange={handleChange}
+        />
+        <Input
+          label="Servicio afectado (ej. Internet)"
+          name="servicio"
+          value={formData.servicio}
+          onChange={handleChange}
+        />
+        <Input
+          label="Descripción del problema"
+          name="descripcion"
+          value={formData.descripcion}
+          onChange={handleChange}
+        />
+        <Input
+          label="Fecha del problema"
+          name="fecha"
+          type="date"
+          value={formData.fecha}
+          onChange={handleChange}
+        />
         <Botton>Enviar Reporte</Botton>
       </form>
     </div>
