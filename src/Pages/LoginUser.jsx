@@ -4,7 +4,7 @@ import { Botton } from "../Components/Botton";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 
-export const LoginUser = () => {
+export const Login = () => {
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
