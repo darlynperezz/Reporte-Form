@@ -3,7 +3,7 @@ import { Input } from "../Components/Input";
 import { Botton } from "../Components/Botton"; // Asegúrate que se llame Botton
 import Swal from "sweetalert2";
 
-export const ReportForm = () => {
+export const ReportFormUser = () => {
   const [formData, setFormData] = useState({
     nombre: "",
     cedula: "",
